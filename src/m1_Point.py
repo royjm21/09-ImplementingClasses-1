@@ -7,6 +7,7 @@ Authors: David Mutchler, Vibha Alangar, Dave Fisher, Amanda Stouder,
 """  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 import math
 
+
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_init()
@@ -61,14 +62,19 @@ class Point(object):
         return Point(self.x, self.y)
 
     def move_to(self, x, y):
+        p1 = self
+        p2 = Point(x, y)
+        d = p1.get_distance_from(p2)
         self.x = x
         self.y = y
         self.moves += 1
+        self.total_distance += d
 
     def move_by(self, dx, dy):
         self.x = self.x + dx
         self.y = self.y + dy
         self.moves += 1
+        self.total_distance += math.sqrt(dx**2 + dy**2)
 
     def get_number_of_moves_made(self):
         return self.moves
@@ -80,6 +86,10 @@ class Point(object):
         return math.sqrt((self.x - self.x_start)**2 + (self.y - self.y_start)**2)
 
     def get_distance_traveled(self):
+        return self.total_distance
+
+    def closer_to(self, p2, p3):
+        distance_from_p2 = 
 
 def run_test_init():
     """
