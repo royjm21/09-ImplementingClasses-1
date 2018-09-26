@@ -97,7 +97,7 @@ class Point(object):
             return p3
 
     def halfway_to(self, p2):
-        
+
 def run_test_init():
     """
     Tests the   __init__   method of the Point class.
